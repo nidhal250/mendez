@@ -23,7 +23,7 @@ def run():
 # ==========================
 # WRITE COMMAND
 # ==========================
-abot.command()
+@bot.command()
 @commands.is_owner()
 async def write(ctx, *, message):
     await ctx.message.delete()
