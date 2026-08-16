@@ -11,7 +11,7 @@ from threading import Thread
 import json
 from typing import Optional
 
-app = Flask(name)  # ✅ تم الإصلاح
+app = Flask(__name__)
 
 @app.route('/')
 def home():
@@ -20,7 +20,6 @@ def home():
 def run():
     port = int(os.environ.get('PORT', 8080))
     app.run(host='0.0.0.0', port=port)
-
 
 
 
