@@ -1,2 +1,2 @@
-discord.py
-audios
+discord.py==2.2.3
+Flask==3.0.0
