@@ -11,16 +11,20 @@ from threading import Thread
 import json
 from typing import Optional
 
-
-app = Flask('')
+app = Flask(name)  # ✅ تم الإصلاح
 
 @app.route('/')
 def home():
-    return "🤖 Bot is alive and running!"
+    return 'Bot is alive and running!'
 
 def run():
     port = int(os.environ.get('PORT', 8080))
     app.run(host='0.0.0.0', port=port)
+
+
+
+
+    
 
 def keep_alive():
     t = Thread(target=run)
