@@ -151,3 +151,19 @@ async def write(ctx, *, message):
     await ctx.message.delete()
     await ctx.send(message)
 
+# ==========================
+# RUN BOT
+# ==========================
+TOKEN = os.getenv('DISCORD_TOKEN')
+if TOKEN is None:
+    print("❌ Error: DISCORD_TOKEN not found!")
+    sys.exit(1)
+
+print("🚀 Starting bot...")
+keep_alive()
+print("🤖 Bot is starting...")
+try:
+    bot.run(TOKEN)
+except Exception as e:
+    print(f"❌ Bot error: {e}")
+    sys.exit(1)
