@@ -39,15 +39,7 @@ intents.members = True
 intents.voice_states = True
 intents.guilds = True
 
-bot = commands.Bot(command_prefix="!", intents=intents)
-﻿
-
- 
- 
- 
- 
-
-
+bot = commands.Bot(command_prefix="!", intents=intents)﻿
 # ==========================
 # HELLO COMMAND
 # ==========================
